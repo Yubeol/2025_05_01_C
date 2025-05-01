@@ -15,14 +15,19 @@ int main(void) {
 	switch (sel) {
 	case 1:
 		printf("짜장면이 나왔다. 6000원 내놔\n");
+		break;
 	case 2:
 		printf("짬뽕이 나왔다. 7000원 내놔\n");
+		break;
 	case 3:
 		printf("우동이 나왔다. 8000원 내놔\n");
+		break;
 	case 4:
 		printf("탕수육이 나왔다. 16000원 내놔\n");
+		break;
 	default:
 		printf("보고 선택해라 좀 없는걸 선택하지 말고!!\n");
+		break;
 	}
 	return 0;
 }
