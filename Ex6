@@ -1,1 +1,65 @@
 
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int score;
+    char grade_main;
+    char grade_sub[3]; // '+', '0', or empty
+
+    // 입력 받기
+    printf("이름을 입력하세요: ");
+    scanf("%s", name);
+
+    printf("점수를 입력하세요: ");
+    scanf("%d", &score);
+
+    // switch-case로 등급 판별 (5점 단위)
+    switch (score / 5) {
+        case 20: // 100점
+        case 19: // 95~99
+            grade_main = 'A';
+            sprintf(grade_sub, "+");
+            break;
+        case 18: // 90~94
+            grade_main = 'A';
+            sprintf(grade_sub, "0");
+            break;
+        case 17: // 85~89
+            grade_main = 'B';
+            sprintf(grade_sub, "+");
+            break;
+        case 16: // 80~84
+            grade_main = 'B';
+            sprintf(grade_sub, "0");
+            break;
+        case 15: // 75~79
+            grade_main = 'C';
+            sprintf(grade_sub, "+");
+            break;
+        case 14: // 70~74
+            grade_main = 'C';
+            sprintf(grade_sub, "0");
+            break;
+        case 13: // 65~69
+            grade_main = 'D';
+            sprintf(grade_sub, "+");
+            break;
+        case 12: // 60~64
+            grade_main = 'D';
+            sprintf(grade_sub, "0");
+            break;
+        default:
+            grade_main = 'F';
+            sprintf(grade_sub, "");
+            break;
+    }
+
+    // 출력
+    if (grade_main == 'F')
+        printf("%s %d점 %c등급\n", name, score, grade_main);
+    else
+        printf("%s %d점 %c%s등급\n", name, score, grade_main, grade_sub);
+
+    return 0;
+}
