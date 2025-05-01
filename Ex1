@@ -1,2 +1,32 @@
 //100~90 사이를 A로 할건지?
 //score/10=10 9 8 7 6 5 ..
+
+#include <stdio.h>
+
+int main() {
+    int number, quantity, unit_price;
+    float discount_rate;
+    int total;
+
+    // 입력 받기
+    printf("번호 개수 단가 할인율 입력: ");
+    scanf("%d %d %d %f", &number, &quantity, &unit_price, &discount_rate);
+
+    // switch-case 사용하여 번호별로 처리
+    switch (number) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            total = (int)(quantity * unit_price * (1 - discount_rate));
+            printf("%d번 %d원\n", number, total);
+            break;
+        default:
+            printf("잘못된 번호입니다.\n");
+            break;
+    }
+
+    return 0;
+}
+
