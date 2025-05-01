@@ -1,33 +1,38 @@
+//5. 연도를 입력받아 각 월의 날짜 수를 출력하시오.단 switch case문을 사용
+//출력 예
+//연도를 입력하세요 : 2024
+//특정 달을 입력하세요 : 5
+//5 월의 일수는 31입니다.
+
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int year, month, days;
 
-    // 입력 받기
+    
     printf("연도를 입력하세요 : ");
-    scanf("%d", &year);
+    scanf_s("%d", &year);
 
     printf("특정 달을 입력하세요 : ");
-    scanf("%d", &month);
+    scanf_s("%d", &month);
+
 
     switch (month) {
-        case 1: case 3: case 5: case 7:
-        case 8: case 10: case 12:
-            days = 31;
-            break;
-        case 4: case 6: case 9: case 11:
-            days = 30;
-            break;
-        case 2:
-            // 윤년 판단
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-                days = 29;
-            else
-                days = 28;
-            break;
-        default:
-            printf("잘못된 달을 입력했습니다.\n");
-            return 1; // 프로그램 종료
+    case 1: case 3: case 5: case 7:
+    case 8: case 10: case 12:
+        days = 31;
+        break;
+    case 4: case 6: case 9: case 11:
+        days = 30;
+        break;
+    case 2:
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            days = 29;
+        else
+            days = 28;
+        break;
+    default:
+        printf("잘못 입력했습니다.\n");
     }
 
     printf("%d 월의 일수는 %d입니다.\n", month, days);
