@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+	int sel;
+
+	printf("===menu===\n");
+	printf("1.짜장면\n");
+	printf("2.짬뽕\n");
+	printf("3.우동\n");
+	printf("4.탕수육\n");
+	printf("=========\n");
+	printf("선택: ");
+	scanf_s("%d", &sel);
+
+	switch (sel) {
+	case 1:
+		printf("짜장면이 나왔다. 6000원 내놔\n");
+	case 2:
+		printf("짬뽕이 나왔다. 7000원 내놔\n");
+	case 3:
+		printf("우동이 나왔다. 8000원 내놔\n");
+	case 4:
+		printf("탕수육이 나왔다. 16000원 내놔\n");
+	default:
+		printf("보고 선택해라 좀 없는걸 선택하지 말고!!\n");
+	}
+	return 0;
+}
