@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+	int sel,price;
+	char menu[10];  //배열 char menu[10]; 
+					//char형이 10개, 그 시작이 menu이고, menu는 문자열의 시작위치(값)
+					//변수=[변수|값|수식|함수|...]
+
+	printf("===menu===\n");
+	printf("1.짜장면\n");
+	printf("2.짬뽕\n");
+	printf("3.우동\n");
+	printf("4.탕수육\n");
+	printf("=========\n");
+	printf("선택: ");
+	scanf_s("%d", &sel);
+
+	switch (sel) { //정수값이 나와야 한다.
+	case 1:
+		strcpy_s(menu, sizeof(menu), "짜장면"); //char menu[10];이 있으면 menu = "짜장면" [x]
+		price = 6000;
+		break;
+	case 2:
+		strcpy_s(menu, sizeof(menu), "짬뽕");
+		price = 7000;
+		break;
+	case 3:
+		strcpy_s(menu, sizeof(menu), "우동");
+		price = 8000;
+		break;
+	case 4:
+		strcpy_s(menu, sizeof(menu), "탕수육");
+		price = 16000;
+		break;
+	default:
+		printf("보고 선택해라 좀 없는걸 선택하지 말고!!\n");
+	}
+	printf("%s이 나왔다. %d원 내놔\n");
+	return 0;
+}
