@@ -12,7 +12,7 @@ int main(void) {
 	printf("선택: ");
 	scanf_s("%d", &sel);
 
-	switch (sel) {
+	switch (sel) { //정수값이 나와야 한다.
 	case 1:
 		printf("짜장면이 나왔다. 6000원 내놔\n");
 		break;
