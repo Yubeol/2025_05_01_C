@@ -27,7 +27,6 @@ int main(void) {
 		break;
 	default:
 		printf("보고 선택해라 좀 없는걸 선택하지 말고!!\n");
-		break;
 	}
 	return 0;
 }
