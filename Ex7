@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main(void) {
+    char name[20];
+    int score;
+    char grade1;
+    char grade2[3] = "";  
+
+    
+    printf("이름: ");
+    scanf_s("%s", name, sizeof(name));  
+
+    
+    printf("점수: ");
+    scanf_s("%d", &score);  
+
+    
+    switch (score / 5) {
+    case 20:  
+        grade1 = 'A';
+        grade2[0] = '+';  
+        break;
+    case 19:  
+        grade1 = 'A';
+        grade2[0] = '+';  
+        break;
+    case 18:  
+        grade1 = 'A';
+        grade2[0] = '+';  
+        break;
+    case 17:  
+        grade1 = 'A';
+        grade2[0] = '0'; 
+    case 16:  
+        grade1 = 'A';
+        grade2[0] = '0';  
+        break;
+    default:  
+        grade1 = 'F';  
+    }
+
+    
+    if (grade1 == 'F') {
+        printf("%s %d점 %c등급\n", name, score, grade1);
+    }
+    else {
+        printf("%s %d점 %c%s등급\n", name, score, grade1, grade2);
+    }
+
+    return 0;
+}
