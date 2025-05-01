@@ -2,15 +2,15 @@
 //출력 예시 : 결과: 10 * 3 = 30 (0으로 나누려하면 0으로 나눌 수 없습니다.출력)
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int num1, num2;
     char op;
     int result;
 
     printf("입력: ");
-    scanf_s("%d %c %d", &num1, &op, &num2);
+    scanf_s("%d %c %d", &num1, &op, sizeof(op), &num2);  
 
- 
+    
     if (op == '+') {
         result = num1 + num2;
         printf("결과: %d %c %d = %d\n", num1, op, num2, result);
