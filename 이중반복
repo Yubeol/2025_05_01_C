@@ -7,11 +7,13 @@ int main(void) {
 
 	for (int i = 1; i <= 10; i++) { //for (초기값; 종료조건;증감식){반복구문}
 		for (int j = 1; j <= 10; j++) { //for (초기값; 종료조건;증감식){반복구문}
-			printf("%d %d\n", i, j);
-			sum += i * j;
+			for (int k = 1; k <= 10; k++) { //for (초기값; 종료조건;증감식){반복구문}
+				printf("%d %d %d\n", i, j, k);
+				sum += i * j * k;
+			}
 		}
 	}
-	avg = sum / 100.;
+	avg = sum / 1000.;
 
 	printf("합:%d 평균:%.2lf\n", sum, avg);
 
