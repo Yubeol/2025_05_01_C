@@ -1,32 +1,32 @@
-//100~90 사이를 A로 할건지?
-//score/10=10 9 8 7 6 5 ..
+//1. 번호, 개수, 단가, 할인율을 입력받아 번호와 금액을 출력하는 프로그램을 작성하시오.
+//[입력형식]
+//번호 개수 단가 할인율 입력 : 1 10 5000 0.1
+//[출력형식]
+//1번 45000원
 
 #include <stdio.h>
 
-int main() {
-    int number, quantity, unit_price;
-    float discount_rate;
-    int total;
+int main(void) {
+	int num, count, unit_price;
+	float discount_rate;
+	int total;
 
-    // 입력 받기
-    printf("번호 개수 단가 할인율 입력: ");
-    scanf("%d %d %d %f", &number, &quantity, &unit_price, &discount_rate);
+	printf("번호, 개수, 단가, 할인율을 입력: ");
+	scanf_s("%d %d %d %d %f", &num, &count, &unit_price, &discount_rate);
 
-    // switch-case 사용하여 번호별로 처리
-    switch (number) {
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-            total = (int)(quantity * unit_price * (1 - discount_rate));
-            printf("%d번 %d원\n", number, total);
-            break;
+	switch (num) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+	total = (int)(count * unit_price * (1 - discount_rate));
+	printf("%d번 %d원\n", num, total);
+	break;
         default:
-            printf("잘못된 번호입니다.\n");
-            break;
-    }
-
-    return 0;
+			printf("다시 입력 하세요.\n");
 }
 
+	return 0;
+
+}
