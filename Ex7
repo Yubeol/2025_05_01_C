@@ -1,3 +1,4 @@
+//7. 6문제의 등급을 A + , A로 하시오.
 #include <stdio.h>
 
 int main(void) {
