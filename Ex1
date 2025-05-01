@@ -7,26 +7,25 @@
 #include <stdio.h>
 
 int main(void) {
-	int num, count, unit_price;
-	float discount_rate;
-	int total;
+    int num, count, unit_price;
+    float discount_rate;
+    int total;
 
-	printf("번호, 개수, 단가, 할인율을 입력: ");
-	scanf_s("%d %d %d %d %f", &num, &count, &unit_price, &discount_rate);
+    printf("번호, 개수, 단가, 할인율을 입력: ");
+    scanf_s("%d %d %d %f", &num, &count, &unit_price, &discount_rate);
 
-	switch (num) {
-		case 1:
-		case 2:
-		case 3:
-		case 4:
-		case 5:
-	total = (int)(count * unit_price * (1 - discount_rate));
-	printf("%d번 %d원\n", num, total);
-	break;
-        default:
-			printf("다시 입력 하세요.\n");
-}
+    switch (num) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        total = (int)(count * unit_price * (1 - discount_rate));  
+        printf("%d번 %d원\n", num, total);  
+        break;
+    default:
+        printf("다시 입력 하세요.\n");
+    }
 
-	return 0;
-
+    return 0;
 }
