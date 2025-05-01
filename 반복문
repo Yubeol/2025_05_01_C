@@ -1,0 +1,25 @@
+//for문과 while문
+//차이점:for문은 범위가 결정된 경우. while문은 범위가 결정되지 않은 경우
+//1~10000까지 반복 : for (범위가 정해저 있기 떄문)
+//게임을 만든다. 게임 횟수는 사용자의 선택이다. : while문사용
+
+/*
+*for1.c 1~10을 출력하고 합과 평균을 출력 
+*/
+#include <stdio.h>
+
+int main(void) {
+	int sum=0;
+	double avg;
+
+	for (int i = 1; i <= 10; i++) { //for (초기값; 종료조건;증감식){반복구문}
+		printf("%d\n", i);
+		sum += i;
+	}
+	avg = sum / 10.;
+
+	printf("합:%d 평균:%.2lf\n", sum, avg);
+
+	return 0;
+
+}
