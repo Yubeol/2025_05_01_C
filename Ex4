@@ -1,16 +1,18 @@
+//4. 자연수 n을 입력받아 n까지 3, 6, 9 게임을 만드시오.
+//출력 예시 : (입력 : 20) 1 2 짝 4 5 짝 7 8 짝 10 11 12 짝 14 15 짝 17 18 짝 20
+
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int n;
     printf("입력: ");
-    scanf("%d", &n);
+    scanf_s("%d", &n);
 
     for (int i = 1; i <= n; i++) {
         int temp = i;
         int clap = 0;
 
-        // 각 자리 숫자 확인
         while (temp > 0) {
             int digit = temp % 10;
             if (digit == 3 || digit == 6 || digit == 9) {
