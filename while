@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+	int sum = 0;
+	double avg;
+
+	//for (int i = 1; i <= 10; i++) { //for (초기값; 종료조건;증감식){반복구문}
+	//	printf("%d\n", i);
+	//	sum += i;
+	//}
+	//avg = sum / 10.;
+
+	//printf("합:%d 평균:%.2lf\n", sum, avg);
+
+
+	int i = 1;
+	while (i <= 10) {
+		printf("%d\n", i);
+		sum += i;
+		i++;
+	}
+	avg = sum / 10.;
+	printf("합:%d 평균:%.2lf\n", sum, avg);
+
+	return 0;
+
+}
